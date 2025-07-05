@@ -23,3 +23,29 @@ class Notification(models.Model):
     
     def __str__(self):
         return self.title
+
+#كود يعبر عن صف المستخدم 
+class LibraryUser(models.Model):
+    ACCOUNT_STATUS_CHOICES = [
+        ('Inactive', 'Inactive'),
+        ('Active', 'Active'),
+      
+    ]
+
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    account_status = models.CharField(
+        max_length=20,
+        choices=ACCOUNT_STATUS_CHOICES,
+        default='Inactive'
+    )
+
+    borrowed_books = models.ManyToManyField('Book', related_name='borrowers', blank=True)
+    notifications = models.ManyToManyField('Notification', related_name='recipients', blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+   
+    def str(self):
+        return self.name
