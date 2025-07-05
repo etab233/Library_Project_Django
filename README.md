@@ -19,4 +19,4 @@ python manage.py runserver
 - جوى اسماعيل : notification model
 - ليث مرعي : userLibrary model
 - غزل سليمان : README.md file
-- كرم غانم
+- كرم غانم :  SRS document + Diagrams
