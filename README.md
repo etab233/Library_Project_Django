@@ -15,8 +15,8 @@ python manage.py migrate
 python manage.py runserver
 
 ## فريق العمل
-- ونوس عتاب : book model
-- اسماعيل جوى : notification model
-- مرعي ليث : userLibrary model
-- اسماعيل  غزل : README.md file
-- غانم كرم 
+- عتاب ونوس : book model
+- جوى اسماعيل : notification model
+- ليث مرعي : userLibrary model
+- غزل سليمان : README.md file
+- كرم غانم
