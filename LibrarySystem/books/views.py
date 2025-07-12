@@ -5,8 +5,7 @@ from .serializers import BookSerializer, NotificationSerializer, LibraryUserSeri
 #### 
 class BookViewSet(viewsets.ModelViewSet):
     serializer_class=BookSerializer
-    def get_queryset(self):
-        return Notification.objects.filter(user=self.request.user)
+    queryset = Book.objects.all()
 ####
 class NotificationViewSet(viewsets.ModelViewSet):
     serializer_class = NotificationSerializer
